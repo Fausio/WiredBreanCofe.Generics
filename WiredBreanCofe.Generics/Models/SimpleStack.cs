@@ -11,13 +11,16 @@ namespace WiredBreanCofe.Generics.Models
         private readonly double[] _items;
         private int index = -1;
 
+       
+
         public SimpleStack()
         {
             _items = new double[10];
         }
 
-        public void push(double item) => _items[++ index] = item;
-        public double pop() => _items[index--];
-    
+        public void Push(double item) => _items[++ index] = item;
+        public double Pop() => _items[index--];
+        public int Count() => index + 1;
+
     }
 }
